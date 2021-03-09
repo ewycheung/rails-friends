@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <strong>First name:</strong>
+    </div>
+    <div class="col">
+      <%= @friend.first_name %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <strong>Last name:</strong>
+    </div>
+    <div class="col">
+      <%= @friend.last_name %>
+    </div>    
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <strong>Email:</strong>
+    </div>
+    <div class="col">
+      <%= @friend.email %>
+    </div>    
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <strong>Phone:</strong>
+    </div>
+    <div class="col">
+      <%= @friend.phone %>
+    </div>    
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <strong>Twitter:</strong>
+    </div>
+    <div class="col">
+      <%= @friend.twitter %>
+    </div>    
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary" %>
+<%= link_to 'Delete', @friend, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %>
+<%= link_to 'Back', friends_path, class:"btn btn-dark" %>
